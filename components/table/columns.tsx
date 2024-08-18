@@ -19,7 +19,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "patient",
-    header: "Patient",
+    header: "Bemor",
     cell: ({ row }) => {
       const appointment = row.original;
       return <p className="text-14-medium ">{appointment.patient.name}</p>;
@@ -39,7 +39,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "schedule",
-    header: "Appointment",
+    header: "Voht Sana",
     cell: ({ row }) => {
       const appointment = row.original;
       return (
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     id: "actions",
-    header: () => <div className="pl-4">Actions</div>,
+    header: () => <div className="pl-4">Harakatlar</div>,
     cell: ({ row }) => {
       const appointment = row.original;
 
@@ -86,7 +86,7 @@ export const columns: ColumnDef<Appointment>[] = [
             userId={appointment.userId}
             appointment={appointment}
             type="schedule"
-            title="Schedule Appointment"
+            title="Rozilik"
             description="Please confirm the following details to schedule."
           />
           <AppointmentModal
@@ -94,8 +94,8 @@ export const columns: ColumnDef<Appointment>[] = [
             userId={appointment.userId}
             appointment={appointment}
             type="cancel"
-            title="Cancel Appointment"
-            description="Are you sure you want to cancel your appointment?"
+            title="Bekor qilmoq"
+            description="Rostan Xam Bekor qilmoqchimisz"
           />
         </div>
       );

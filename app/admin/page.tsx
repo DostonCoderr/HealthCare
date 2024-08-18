@@ -27,9 +27,9 @@ const AdminPage = async () => {
 
       <main className="admin-main">
         <section className="w-full space-y-4">
-          <h1 className="header">Welcome 👋</h1>
+          <h1 className="header">Hush kelibsiz 👋</h1>
           <p className="text-dark-700">
-            Start the day with managing new appointments
+          Kunni yangi uchrashuvlarni boshqarish bilan boshlang
           </p>
         </section>
 
@@ -37,19 +37,19 @@ const AdminPage = async () => {
           <StatCard
             type="appointments"
             count={appointments.scheduledCount}
-            label="Scheduled appointments"
+            label="Rejalashtirilgan uchrashuvlar"
             icon={"/assets/icons/appointments.svg"}
           />
           <StatCard
             type="pending"
             count={appointments.pendingCount}
-            label="Pending appointments"
+            label="Kutilayotgan uchrashuvlar"
             icon={"/assets/icons/pending.svg"}
           />
           <StatCard
             type="cancelled"
             count={appointments.cancelledCount}
-            label="Cancelled appointments"
+            label="Bekor qilingan uchrashuvlar"
             icon={"/assets/icons/cancelled.svg"}
           />
         </section>

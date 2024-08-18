@@ -133,9 +133,9 @@ export const AppointmentForm = ({
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex-1 space-y-6">
         {type === "create" && (
           <section className="mb-12 space-y-4">
-            <h1 className="header">New Appointment</h1>
+            <h1 className="header">Yangi uchrashuv</h1>
             <p className="text-dark-700">
-              Request a new appointment in 10 seconds.
+            10 soniya ichida yangi uchrashuvni talab qiling.
             </p>
           </section>
         )}
@@ -146,8 +146,8 @@ export const AppointmentForm = ({
               fieldType={FormFieldType.SELECT}
               control={form.control}
               name="primaryPhysician"
-              label="Doctor"
-              placeholder="Select a doctor"
+              label="Doktor"
+              placeholder="Shifokorni tanlang"
             >
               {Doctors.map((doctor, i) => (
                 <SelectItem key={doctor.name + i} value={doctor.name}>
@@ -169,7 +169,7 @@ export const AppointmentForm = ({
               fieldType={FormFieldType.DATE_PICKER}
               control={form.control}
               name="schedule"
-              label="Expected appointment date"
+              label="Kutilayotgan uchrashuv sanasi"
               showTimeSelect
               dateFormat="MM/dd/yyyy  -  h:mm aa"
             />
@@ -181,8 +181,8 @@ export const AppointmentForm = ({
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="reason"
-                label="Appointment reason"
-                placeholder="Annual montly check-up"
+                label="Uchrashuv sababi"
+                placeholder="Yillik oylik Tekshiruv"
                 disabled={type === "schedule"}
               />
 
@@ -190,8 +190,8 @@ export const AppointmentForm = ({
                 fieldType={FormFieldType.TEXTAREA}
                 control={form.control}
                 name="note"
-                label="Comments/notes"
-                placeholder="Prefer afternoon appointments, if possible"
+                label="Izohlar/eslatmalar"
+                placeholder="Iloji bolsa Tezroq, & Bowqa sabibi yozing"
                 disabled={type === "schedule"}
               />
             </div>

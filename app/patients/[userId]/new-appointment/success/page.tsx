@@ -38,14 +38,14 @@ const RequestSuccess = async ({
             alt="success"
           />
           <h2 className="header mb-6 max-w-[600px] text-center">
-            Your <span className="text-green-500">appointment request</span> has
-            been successfully submitted!
+            Sizning <span className="text-green-500">Uchrashuv sorovingiz </span> muvaffaqiyatli topshirildi!
+
           </h2>
-          <p>We&apos;ll be in touch shortly to confirm.</p>
+          <p>Tasdiqlash uchun tez orada boglanamiz.</p>
         </section>
 
         <section className="request-details">
-          <p>Requested appointment details: </p>
+          <p>Soralgan uchrashuv tafsilotlari: </p>
           <div className="flex items-center gap-3">
             <Image
               src={doctor?.image!}
@@ -67,11 +67,18 @@ const RequestSuccess = async ({
           </div>
         </section>
 
-        <Button variant="outline" className="shad-primary-btn" asChild>
-          <Link href={`/patients/${userId}/new-appointment`}>
-            New Appointment
-          </Link>
-        </Button>
+        <section className="flex gap-5">
+          <Button variant="outline" className="shad-primary-btn" asChild>
+            <Link href={`/patients/${userId}/new-appointment`}>
+              Yengi Uchrashuv
+            </Link>
+          </Button>
+          <Button variant="outline" className=" hover:text-yellow-200" asChild>
+            <Link href={`/`}>
+              Akkauntan Chiqish
+            </Link>
+          </Button>
+        </section>
 
         <p className="copyright">© 2024 CarePluse</p>
       </div>
