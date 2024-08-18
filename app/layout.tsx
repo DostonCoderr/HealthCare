@@ -27,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script src="//code.jivo.ru/widget/6VqxtMmXs9" defer async></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-dark-300 font-sans antialiased",
